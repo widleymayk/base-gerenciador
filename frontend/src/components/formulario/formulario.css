@@ -1,0 +1,145 @@
+/* Ajuste geral para o formulário de criação de tarefas */
+.formulario-tarefas {
+    border: 1px solid var(--cinza-tundora);
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--branco);
+    max-width: 960px;
+    margin: 40px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.formulario-tarefas--linha-inteira {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin-bottom: 16px; 
+}
+
+
+.formulario-tarefas--linha-metade {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    flex: 0 0 48%;
+    margin-bottom: 10px; 
+}
+
+
+.formulario-tarefas--coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+
+.input--borda {
+    border: 1px solid var(--cinza-tundora);
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+    font-size: 16px; 
+}
+
+
+.input-textarea {
+    resize: none;
+    min-height: 80px; 
+}
+
+
+.formulario-tarefas__botao {
+    border: 1px solid var(--cinza-tundora);
+    border-radius: 8px;
+    width: 172px;
+    padding: 8px 0;
+    margin-top: 16px;
+    transition: all 0.25s;
+    background-color: var(--cinza-tundora);
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.formulario-tarefas__botao:hover,
+.formulario-tarefas__botao:focus {
+    transform: scale(1.03);
+    background-color: var(--cinza-escuro); 
+}
+
+
+.container__checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+.container__checkbox--item {
+    display: flex;
+    gap: 8px;
+    
+}
+
+.container__checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    flex: 1;
+    align-self: flex-start; 
+}
+
+
+.container__checkbox--item label {
+    margin-left: 8px;
+}
+
+
+input[type="date"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--cinza-tundora);
+}
+
+
+.erro-mensagem {
+    color: #FF5733;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+@media (min-width: 601px) {
+    .formulario-tarefas--linha-inteira {
+        flex-wrap: nowrap; 
+    }
+
+    .formulario-tarefas--coluna {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .container__checkbox-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .formulario-tarefas--linha-metade {
+        flex: 0 0 100%; 
+    }
+
+    .formulario-tarefas__botao {
+        width: 100%;
+        margin-bottom: 10px; 
+    }
+
+    .container__checkbox-grid {
+        grid-template-columns: 1fr; 
+    }
+}

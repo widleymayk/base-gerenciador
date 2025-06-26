@@ -1,0 +1,10 @@
+@import url('./fontes.css');
+@import url('./variaveis.css');
+@import url('./reset.css');
+
+.conteudo-principal {
+    max-width: 960px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 0px; 
+}
